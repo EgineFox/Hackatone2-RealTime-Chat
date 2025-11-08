@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<title>Real-time chat</title>
+</head>
+<body>
+    <!-- main container-->
+  <div class="window">
+      <!-- dialogs -->
+  <aside class="conv-list-view">
+     <div id="currentUser" class="meta current-user">
+    <figure class="status__avatar">
+      <img src="${avatarUrl}" alt="Ваш аватар" />
+    </figure>
+    <div class="meta__name"></div>
+  </div>
+      <!-- contacts-->
+    <ul id="userList" class="conv-list">
+    </ul>
+  </aside>
+    <!-- chat window -->
+  <section class="chat-view">
+  <h2 id="chatHeaderName">Select a user to start chat...</h2>
+  </header>
+    <section class="message-view">
+         <div id="messages">
+           <div id="typing-indicator" style="display: none; color: rgb(99, 170, 221); font-style: italic;"></div>
+         </div>
+      
+    </section>
+    <footer class="chat-view__input">
+      <div class="input">
+      <input id="messageInput" placeholder="Enter tour message..." />
+      </div>
+    <div class="status">
+        <button id="sendBtn">Send</button>
+        <figure class="status__avatar--small">
+          <img src="" />
+        </figure>
+      </div>
+    </footer>
+  </section>
+</div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>
