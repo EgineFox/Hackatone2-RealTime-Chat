@@ -27,7 +27,7 @@ app.use('/avatars', express.static(path.join(__dirname, 'public/avatars')));
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const messageRoutes = require('./routes/messageRoutes');
-const testRoutes = require('./routes/testRoutes');
+
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
